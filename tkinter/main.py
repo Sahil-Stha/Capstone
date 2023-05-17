@@ -25,7 +25,7 @@ def show_age_death_counts():
     plt.title('Distribution of Ages in Suicide Dataset')
     plt.show()  
 
-# Define a function to create the bar chart of the UFO Suicide Rate by Gender
+# Define a function to create the bar chart of Suicides by Gender
 def show_suiciderate_gender_counts():
     plt.figure(figsize=(10, 15))
     sns.countplot(x='Sex', data=df,hue= 'Died')
@@ -43,7 +43,7 @@ def show_age_education_distribution():
     plt.title('Age versus Education Level')
     plt.show()
 
-# Define a function to create the line chart of the number of UFO sightings by year
+# Define a function to create the line chart of Suicide by occupation
 def show_suicide_occupation_counts():
     plt.figure(figsize=(10, 6))
     sns.boxplot(x='Occupation', y='Died', data=df)
@@ -53,7 +53,7 @@ def show_suicide_occupation_counts():
     plt.xticks(rotation=90)
     plt.show()
 
-# Define a function to create the boxplot of UFO sighting durations
+# Define a function to create the boxplot of Suicide rates
 def show_suicide_rate():
     suicide_rates = df.groupby('Year')['Died'].sum().reset_index()
     plt.figure(figsize=(10, 6))
